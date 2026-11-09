@@ -1,0 +1,400 @@
+/*
+    font-family: "IBM Plex Mono", monospace;
+  font-family: "News Cycle",
+  sans-serif;
+
+*/
+
+* 
+{
+  --primaryWhite: white;
+  --primaryBlack: black;
+  --emphasisRed: #C20000;
+  font-size: 12px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body
+{
+  background-color: black;
+}
+nav
+{
+  /* Sticky navigation for bar position*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  /*display object*/
+  display: flex;
+  z-index: 10;
+  width: 100vw; 
+  height: 96px;
+  padding: 24px;
+  background-color: var(--primaryBlack);
+  
+  /*child object's alignment using flex*/
+  align-items: center;
+  justify-content: center;
+  /*text color*/
+  color: var(--primaryWhite);
+}
+
+nav > img
+{
+  width: 60px;
+  height: 60px;
+}
+
+nav > ul
+{
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li
+{
+  padding: 12px;
+}
+
+nav ul > li:hover
+{
+  background-color: var(--emphasisRed);
+  color: var(--primaryBlack);
+}
+
+.hero
+{
+  background-image: url('./assets/thehiss.webp');
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero header
+{
+  margin: 0 auto; 
+  z-index: 9;
+
+  font-size: 60px; 
+  color: white; 
+  
+}
+
+.hero p
+{
+  margin: 0 auto; 
+  z-index: 9;
+
+  font-size: 48px; 
+  color: white; 
+}
+
+/*darkening effect by overlaying black*/
+#overlay
+{
+  position: absolute; 
+  z-index: 8;
+  height: 100vh; 
+  width: 100vw; 
+  background-color: rgba(7, 7, 7, 0.5);
+}
+
+/*colors every h2 in html*/
+h2
+{
+  font-size: 36px;
+  color: white; 
+}
+
+.message
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /*child text block*/
+  .contentLeft
+{
+  color: var(--primaryWhite);
+  padding: 12px; 
+  font-family: "News Cycle";
+  font-size: 1.5rem;
+}
+}
+
+
+.director
+{
+  width: 95vw; 
+  display: grid; 
+  grid-template-columns: 50% 50%;
+
+  /*child text object*/
+  .contentRight
+{
+  padding: 12px; 
+  color: white;
+}
+  /*child paragraph object*/
+  .contentRight > p 
+{
+  font-family: "News Cycle";
+  font-size: 1.5rem;
+}
+
+#directorImage > img 
+{ 
+  width: 100%; 
+
+}
+}
+
+.dashboard
+{
+
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px;
+  gap: 4px 
+}
+
+.dashboard > div 
+{
+  background-color: white;
+  color: black;
+  border-radius: 4px; 
+  padding: 12px;
+}
+
+.dashboard > div > h2 
+{
+  margin-bottom: 4px; 
+  color: var(--emphasisRed);
+}
+
+footer
+{
+  display: grid; 
+  color: white;
+  grid-template-columns: 150px repeat(4, 1fr);
+  column-gap: 6px;
+
+}
+
+footer > img 
+{
+  width: 100%;
+}
+
+footer > div 
+{
+  padding: 12px;
+}
+
+/*Copy of code above*/
+@media screen and (max-width: 720px)
+{
+  * 
+{
+  --primaryWhite: white;
+  --primaryBlack: black;
+  --emphasisRed: #C20000;
+  font-size: 12px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body
+{
+  background-color: black;
+}
+nav
+{
+  /* Sticky navigation for bar position*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  /*display object*/
+  display: flex;
+  z-index: 10;
+  width: 100vw; 
+  height: 96px;
+  padding: 24px;
+  background-color: var(--primaryBlack);
+  
+  /*child object's alignment using flex*/
+  align-items: center;
+  justify-content: center;
+  /*text color*/
+  color: var(--primaryWhite);
+}
+
+nav > img
+{
+  width: 60px;
+  height: 60px;
+}
+
+nav > ul
+{
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li
+{
+  padding: 12px;
+}
+
+nav ul > li:hover
+{
+  background-color: var(--emphasisRed);
+  color: var(--primaryBlack);
+}
+
+.hero
+{
+  background-image: url('./assets/thehiss.webp');
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero header
+{
+  margin: 0 auto; 
+  z-index: 9;
+
+  font-size: 60px; 
+  color: white; 
+  
+}
+
+.hero p
+{
+  margin: 0 auto; 
+  z-index: 9;
+
+  font-size: 48px; 
+  color: white; 
+}
+
+/*darkening effect by overlaying black*/
+#overlay
+{
+  position: absolute; 
+  z-index: 8;
+  height: 100vh; 
+  width: 100vw; 
+  background-color: rgba(7, 7, 7, 0.5);
+}
+
+/*colors every h2 in html*/
+h2
+{
+  font-size: 36px;
+  color: white; 
+}
+
+.message
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /*child text block*/
+  .contentLeft
+{
+  color: var(--primaryWhite);
+  padding: 12px; 
+  font-family: "News Cycle";
+  font-size: 1.5rem;
+}
+}
+
+
+.director
+{
+  width: 95vw; 
+  display: grid; 
+  grid-template-columns: 50% 50%;
+
+  /*child text object*/
+  .contentRight
+{
+  padding: 12px; 
+  color: white;
+}
+  /*child paragraph object*/
+  .contentRight > p 
+{
+  font-family: "News Cycle";
+  font-size: 1.5rem;
+}
+
+#directorImage > img 
+{ 
+  width: 100%; 
+
+}
+}
+
+.dashboard
+{
+
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px;
+  gap: 4px 
+}
+
+.dashboard > div 
+{
+  background-color: white;
+  color: black;
+  border-radius: 4px; 
+  padding: 12px;
+}
+
+.dashboard > div > h2 
+{
+  margin-bottom: 4px; 
+  color: var(--emphasisRed);
+}
+
+footer
+{
+  display: grid; 
+  color: white;
+  grid-template-columns: 150px repeat(4, 1fr);
+  column-gap: 6px;
+
+}
+
+footer > img 
+{
+  width: 100%;
+}
+
+footer > div 
+{
+  padding: 12px;
+}
+}
